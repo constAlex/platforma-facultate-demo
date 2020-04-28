@@ -1,3 +1,9 @@
+.NavBar-AppBar {
+    display: flex!important;
+    flex-direction: row!important;
+    height: 50px!important;
+}
+
 .NavBar-Link {
     text-decoration: none;
     margin: auto;
