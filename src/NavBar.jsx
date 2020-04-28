@@ -3,17 +3,33 @@ import "./NavBar.css";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
+import { Link } from "react-router-dom";
 
 class NavBar extends Component {
+  constructor() {
+    super();
+    this.handleNavigation = this.handleNavigation.bind(this);
+  }
+
+  handleNavigation() {}
+
   render() {
     return (
       <div className="NavBar">
         <AppBar position="static">
-          <Tabs centered textColor="inherit" indicatorColor="primary">
-            <Tab label="Programare" />
-            <Tab label="Modificare" />
-            <Tab label="Stergere" />
-            <Tab label="Interogare" />
+          <Tabs centered>
+            <Link className="NavBar-Link" to="/programare">
+              Programare
+            </Link>
+            <Link className="NavBar-Link" to="/modificare">
+              Modificare
+            </Link>
+            <Link className="NavBar-Link" to="/stergere">
+              Stergere
+            </Link>
+            <Link className="NavBar-Link" to="/interogare">
+              Interogare
+            </Link>
           </Tabs>
         </AppBar>
       </div>

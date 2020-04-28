@@ -1,0 +1,14 @@
+.NavBar-Link {
+    text-decoration: none;
+    margin: auto;
+    color: rgb(255, 122, 122);
+    font-weight: 400;
+    font-size: larger;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.NavBar-Link:hover {
+    cursor: pointer;
+    color: rgb(197, 48, 48);
+}
