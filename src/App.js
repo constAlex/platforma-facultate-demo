@@ -1,11 +1,14 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Container from "@material-ui/core/Container";
+import NavBar from './NavBar';
 
 function App() {
   return (
-    <div className="App">
+    <Container className="App" maxWidth="md">
+      <NavBar />
       
-    </div>
+    </Container>
   );
 }
 
