@@ -12,3 +12,7 @@
 .MainForm-Field {
     margin-bottom: 20px;
 }
+
+.MainForm-SendBtn {
+    width: 100%;
+}
