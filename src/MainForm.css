@@ -1,0 +1,9 @@
+.MainForm {
+    height: 100vh;
+}
+
+.MainForm form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
