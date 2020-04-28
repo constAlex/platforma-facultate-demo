@@ -3,21 +3,41 @@ import "./MainForm.css";
 import TextField from "@material-ui/core/TextField";
 
 class MainForm extends Component {
+  constructor() {
+    super();
+    this.state = {
+      materia: "",
+      profesor: "",
+    };
+  }
   render() {
     return (
       <div className="MainForm">
         <h1>Programare Examen</h1>
         <form>
+          <label for="specializare">Specializare</label>
+          <select id="sesiune">
+            <option>Informatica-Economica</option>
+            <option>Informatica-Matematica</option>
+          </select>
           <label for="materia">Materia</label>
-          <input type="text" name="meteria" />
-          <label for="profesor">Profesor</label>
-          <input type="text" name="profesor" />
-          <label for="sesiune">Sesiunea</label>
-          <input type="text" name="sesiune" />
+          <select id="materia">
+            <option>C#</option>
+            <option>Java</option>
+            <option selected>Web Design</option>
+            <option>Baze de Date SQL</option>
+            <option>Algebra Liniara</option>
+            <option>Econometrie</option>
+          </select>
+          <label for="profesor">Nume Profesor</label>
+          <input type="text" id="profesor" />
+          <label for="sesiune">Perioada Sesiune</label>
+          <select id="sesiune">
+            <option>Vara</option>
+            <option>Iarna</option>
+          </select>
           <TextField label="An Universitar" type="number" defaultValue="2019" />
           <TextField label="An de studii" type="number" defaultValue="1" />
-          <label for="sectia">Sectia</label>
-          <input type="text" name="sectia" />
           <TextField
             label="Data examenului"
             type="date"
