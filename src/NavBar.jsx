@@ -1,7 +1,6 @@
 import React from "react";
 import "./NavBar.css";
 import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
 import { Link } from "react-router-dom";
 
 function NavBar() {
