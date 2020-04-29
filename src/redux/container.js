@@ -4,7 +4,7 @@ import { ADAUGA_PROGRAMARE, STERGE_PROGRAMARE } from './actions';
 
 const mapStateToProps = state => {
   return {
-    programari: state
+    programari: state.programari
   };
 };
 const mapDispatchToProps = dispatch => {

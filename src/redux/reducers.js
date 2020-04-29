@@ -1,8 +1,6 @@
 import { ADAUGA_PROGRAMARE, STERGE_PROGRAMARE, UPDATE_PROGRAMARE } from "./actions"
 
-
 const initialState =  { programari :[] };
-  
 
   export const programareReducer = (state = initialState, action) => {
     switch (action.type) {
