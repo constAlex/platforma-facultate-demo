@@ -2,16 +2,17 @@ import React from "react";
 import "./App.css";
 import Container from "@material-ui/core/Container";
 import NavBar from "./NavBar";
-import MainForm from "./MainForm";
 import { Switch, Route } from "react-router-dom";
+import { FormContainer } from "./redux/container";
 
 function App() {
   return (
+    
     <Container className="App" maxWidth="md">
       <NavBar />
       <Switch>
-        <Route exact path="/" render={() => <MainForm />} />
-        <Route exact path="/programare" render={() => <MainForm />} />
+        <Route exact path="/" render={() => <FormContainer />} />
+        <Route exact path="/programare" render={() => <FormContainer />} />
         <Route render={() => <h1>NOT FOUND.</h1>} />
       </Switch>
     </Container>

@@ -1,13 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "./MainForm.css";
 import TextField from "@material-ui/core/TextField";
 import NativeSelect from "@material-ui/core/NativeSelect";
 import Button from "@material-ui/core/Button";
 
-class MainForm extends Component {
-  constructor() {
-    super();
-    this.state = {
+
+export default function MainForm({programari,addProgramare,stergeProgramare}) {
+     const [form,setForm] = useState({
       specializare: "",
       materie: "",
       profesor: "",
@@ -16,33 +15,30 @@ class MainForm extends Component {
       an_stud: 1,
       data_exam: "2019-05-24",
       ora_exam: "07:30",
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleSubmit(ev) {
-    ev.preventDefault();
-    console.log(this.state);
-  }
-
-  handleChange(ev) {
-    // console.log(ev.target.value);
-    this.setState({
-      [ev.target.name]: ev.target.value,
     });
-  }
+   const handleSubmit = (ev) => {
+      ev.preventDefault();
+      addProgramare(form);
+      console.log('CE AM IN REDUX',programari);
+    }
+  
+   const handleChange = (ev) => {
+      // console.log(ev.target.value);
+      setForm({...form,
+        [ev.target.name]: ev.target.value,
+      });
+      
+    }
 
-  render() {
-    return (
+  return (
       <div className="MainForm">
         <h1>Programare Examen</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="specializare">Specializare</label>
           <NativeSelect
             className="MainForm-Field"
             id="specializare"
-            onChange={this.handleChange}
+            onChange={handleChange}
             name="specializare"
           >
             <option>Informatica-Economica</option>
@@ -52,7 +48,7 @@ class MainForm extends Component {
           <NativeSelect
             className="MainForm-Field"
             id="materia"
-            onChange={this.handleChange}
+            onChange={handleChange}
             name="materie"
           >
             <option>C#</option>
@@ -68,14 +64,14 @@ class MainForm extends Component {
             type="text"
             id="profesor"
             name="profesor"
-            value={this.state.profesor}
-            onChange={this.handleChange}
+            value={form.profesor}
+            onChange={handleChange}
           />
           <label htmlFor="sesiune">Perioada Sesiune</label>
           <NativeSelect
             className="MainForm-Field"
             id="sesiune"
-            onChange={this.handleChange}
+            onChange={handleChange}
             name="sesiune"
           >
             <option>Vara</option>
@@ -86,32 +82,32 @@ class MainForm extends Component {
             label="An Universitar"
             type="number"
             name="an_univ"
-            value={this.state.an_univ}
-            onChange={this.handleChange}
+            value={form.an_univ}
+            onChange={handleChange}
           />
           <TextField
             style={{ marginBottom: "20px" }}
             label="An de studii"
             type="number"
             name="an_stud"
-            value={this.state.an_stud}
-            onChange={this.handleChange}
+            value={form.an_stud}
+            onChange={handleChange}
           />
           <TextField
             style={{ marginBottom: "20px" }}
             label="Data examenului"
             type="date"
             name="data_exam"
-            value={this.state.data_exam}
-            onChange={this.handleChange}
+            value={form.data_exam}
+            onChange={handleChange}
           />
           <TextField
             style={{ marginBottom: "20px" }}
             label="Ora examenului"
             type="time"
             name="ora_exam"
-            value={this.state.ora_exam}
-            onChange={this.handleChange}
+            value={form.ora_exam}
+            onChange={handleChange}
           />
           <Button
             type="submit"
@@ -124,7 +120,5 @@ class MainForm extends Component {
         </form>
       </div>
     );
-  }
 }
 
-export default MainForm;
