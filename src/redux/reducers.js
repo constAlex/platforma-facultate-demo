@@ -1,16 +1,17 @@
 import { ADAUGA_PROGRAMARE, STERGE_PROGRAMARE, UPDATE_PROGRAMARE } from "./actions"
 
 
-const initialState =  [];
+const initialState =  { programari :[] };
   
 
   export const programareReducer = (state = initialState, action) => {
     switch (action.type) {
       case ADAUGA_PROGRAMARE:
         {
-          console.log('sunt in reducer si fac add cu ', action.programare);
-          console.log('ce am de fapt in state', state);
-          return Array.from(state.push(action.programare)); 
+          return { 
+            ...state,
+            programari: [...state.programari, action.programare]
+        }
         }
         case STERGE_PROGRAMARE:
             {
