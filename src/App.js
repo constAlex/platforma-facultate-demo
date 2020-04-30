@@ -11,7 +11,7 @@ function App() {
     <Container className="App" maxWidth="md">
       <NavBar />
       <Switch>
-        <Route exact path="/" render={() => <FormContainer />} />
+        <Route exact path="/" render={() => <h1>Lista examenelor programate</h1>} />
         <Route exact path="/programare" render={() => <FormContainer />} />
         <Route render={() => <h1>NOT FOUND.</h1>} />
       </Switch>

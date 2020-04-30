@@ -5,14 +5,14 @@ import NativeSelect from "@material-ui/core/NativeSelect";
 import Button from "@material-ui/core/Button";
 import useInputState from "./hooks/inputHook";
 
-const  MainForm = ({programari,addProgramare,stergeProgramare}) => {
+const MainForm = ({ programari, adaugaProgramare, stergeProgramare }) => {
   const [examDetails, changeExamDetails] = useInputState();
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    console.log(examDetails);
-    addProgramare(examDetails);
-    console.log('programarile din redux:',programari);
+    // console.log(examDetails);
+    adaugaProgramare(examDetails);
+    console.log("programarile din redux:", programari);
   };
 
   const handleChange = (ev) => {
@@ -110,6 +110,6 @@ const  MainForm = ({programari,addProgramare,stergeProgramare}) => {
       </form>
     </div>
   );
-}
+};
 
 export default MainForm;

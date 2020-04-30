@@ -1,4 +1,6 @@
-import { createStore } from 'redux';
-import { programareReducer } from './reducers';
+import { createStore } from "redux";
+import { programariReducer } from "./reducers";
 
-export const store = createStore(programareReducer);
+const initialState = [];
+
+export const store = createStore(programariReducer, initialState);
