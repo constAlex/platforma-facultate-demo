@@ -4,6 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import NativeSelect from "@material-ui/core/NativeSelect";
 import Button from "@material-ui/core/Button";
 import useInputState from "./hooks/inputHook";
+import { v4 as uuidv4 } from "uuid";
 
 const MainForm = ({
   programare,
@@ -11,11 +12,12 @@ const MainForm = ({
   adaugaProgramare,
   stergeProgramare,
 }) => {
-  const [examDetails, changeExamDetails] = useInputState();
+  const [examDetails, changeExamDetails, addId] = useInputState();
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
     // console.log(examDetails);
+    addId(uuidv4());
     adaugaProgramare(examDetails);
     // console.log("aceasta este o programare", programare);
     console.log("programarile din redux:", programari);

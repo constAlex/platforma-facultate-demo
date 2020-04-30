@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function useInputState() {
   const initialState = {
+    id: "0",
     specializare: "",
     materie: "Web Design",
     profesor: "",
@@ -18,7 +19,11 @@ function useInputState() {
     setState((prev) => ({ ...prev, [name]: value }));
   }
 
-  return [state, changeInput];
+  function addId(id) {
+    setState((prev) => ({ ...prev, id }));
+  }
+
+  return [state, changeInput, addId];
 }
 
 export default useInputState;
