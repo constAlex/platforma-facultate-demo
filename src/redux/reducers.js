@@ -4,6 +4,8 @@ import {
   UPDATE_PROGRAMARE,
 } from "./actions";
 
+// import { combineReducers } from "redux";
+
 function actualizareProgramari(state, action) {
   switch (action.type) {
     case ADAUGA_PROGRAMARE:
@@ -31,10 +33,20 @@ function actualizareProgramari(state, action) {
   }
 }
 
+function actualizareProgramare(state, action) {
+  return state;
+}
+
 const programariReducer = (state, action) => {
   return {
     programari: actualizareProgramari(state.programari, action),
+    programare: actualizareProgramare(state.programare, action),
   };
 };
+
+// const programariReducer = combineReducers({
+//   programari: actualizareProgramari,
+//   programare: actualizareProgramare,
+// });
 
 export default programariReducer;
