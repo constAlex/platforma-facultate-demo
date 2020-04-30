@@ -1,6 +1,10 @@
 import { connect } from "react-redux";
 import MainForm from "../MainForm";
-import { ADAUGA_PROGRAMARE, STERGE_PROGRAMARE } from "./actions";
+import {
+  adaugaProgramare,
+  stergeProgramare,
+  updateProgramare,
+} from "./actions";
 
 const mapStateToProps = (state) => {
   return {
@@ -9,9 +13,9 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    adaugaProgramare: (programare) =>
-      dispatch({ type: ADAUGA_PROGRAMARE, programare }),
-    stergereProgramare: () => dispatch({ type: STERGE_PROGRAMARE }),
+    adaugaProgramare: (programare) => dispatch(adaugaProgramare(programare)),
+    stergeProgramare: () => dispatch(stergeProgramare()),
+    updateProgramare: () => dispatch(updateProgramare()),
   };
 };
 export const FormContainer = connect(
