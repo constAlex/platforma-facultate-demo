@@ -15,8 +15,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     adaugaProgramare: (programare) => dispatch(adaugaProgramare(programare)),
-    stergeProgramare: () => dispatch(stergeProgramare()),
-    updateProgramare: () => dispatch(updateProgramare()),
+    stergeProgramare: (id) => dispatch(stergeProgramare(id)),
+    updateProgramare: (programare, id) =>
+      dispatch(updateProgramare(programare, id)),
   };
 };
 export const FormContainer = connect(

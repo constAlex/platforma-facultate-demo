@@ -7,10 +7,10 @@ export function adaugaProgramare(programare) {
   return { type: ADAUGA_PROGRAMARE, programare };
 }
 
-export function stergeProgramare() {
-  return { type: STERGE_PROGRAMARE };
+export function stergeProgramare(id) {
+  return { type: STERGE_PROGRAMARE, id };
 }
 
-export function updateProgramare() {
-  return { type: UPDATE_PROGRAMARE };
+export function updateProgramare(programare, id) {
+  return { type: UPDATE_PROGRAMARE, payload: { programare, id } };
 }
