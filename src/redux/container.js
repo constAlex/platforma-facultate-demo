@@ -8,7 +8,7 @@ import {
 
 const mapStateToProps = (state) => {
   return {
-    programari: state,
+    programari: state.programari,
   };
 };
 const mapDispatchToProps = (dispatch) => {

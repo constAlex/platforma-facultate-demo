@@ -4,7 +4,7 @@ import {
   UPDATE_PROGRAMARE,
 } from "./actions";
 
-export const programariReducer = (state, action) => {
+function actualizareProgramari(state, action) {
   switch (action.type) {
     case ADAUGA_PROGRAMARE:
       return [...state, action.programare];
@@ -29,4 +29,12 @@ export const programariReducer = (state, action) => {
     default:
       return state;
   }
+}
+
+const programariReducer = (state, action) => {
+  return {
+    programari: actualizareProgramari(state.programari, action),
+  };
 };
+
+export default programariReducer;

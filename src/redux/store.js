@@ -1,6 +1,8 @@
 import { createStore } from "redux";
-import { programariReducer } from "./reducers";
+import programariReducer from "./reducers";
 
-const initialState = [];
-
+// state tree should be a single object.
+const initialState = {
+  programari: [],
+};
 export const store = createStore(programariReducer, initialState);
