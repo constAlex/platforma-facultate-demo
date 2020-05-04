@@ -9,7 +9,6 @@ import {
 const mapStateToProps = (state) => {
   return {
     programari: state.programari,
-    programare: state.programare,
   };
 };
 const mapDispatchToProps = (dispatch) => {

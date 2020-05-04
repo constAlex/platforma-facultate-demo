@@ -29,14 +29,9 @@ function actualizareProgramari(state, action) {
   }
 }
 
-function actualizareProgramare(state, action) {
-  return state;
-}
-
 const programariReducer = (state, action) => {
   return {
-    programari: actualizareProgramari(state.programari, action),
-    programare: actualizareProgramare(state.programare, action),
+    programari: actualizareProgramari(state.programari, action)
   };
 };
 

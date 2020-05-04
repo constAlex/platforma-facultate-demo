@@ -7,7 +7,6 @@ import useInputState from "./hooks/inputHook";
 import { v4 as uuidv4 } from "uuid";
 
 const MainForm = ({
-  programare,
   programari,
   adaugaProgramare,
   stergeProgramare,
