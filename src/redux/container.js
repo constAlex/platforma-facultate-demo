@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import Main from "../Main";
 import MainForm from "../MainForm";
 import {
   adaugaProgramare,
@@ -23,3 +24,5 @@ export const FormContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(MainForm);
+
+export const MainContainer = connect(mapStateToProps)(Main);
