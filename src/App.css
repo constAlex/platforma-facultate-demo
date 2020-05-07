@@ -1,0 +1,5 @@
+.MainForm Form {
+  background: -webkit-gradient(linear, right top, left top, from(#2980b9), color-stop(#6dd5fa), to(#ffffff));
+  background: linear-gradient(to left, #2980b9, #6dd5fa, #ffffff);
+}
+/*# sourceMappingURL=App.css.map */
