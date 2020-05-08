@@ -67,6 +67,14 @@ function Main({ programari }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState("");
 
+  const handleClick = (id) => {
+    if (open === id) {
+      setOpen(false);
+    } else {
+      setOpen(id);
+    }
+  }
+
   return (
     <List
       component="nav"
@@ -87,7 +95,7 @@ function Main({ programari }) {
             <ExpansionPanel
               square
               expanded={open === programare.id}
-              onClick={() => setOpen(programare.id)}
+              onClick={() => handleClick(programare.id)}
             >
               <ExpansionPanelSummary
                 aria-controls="panel1d-content"
