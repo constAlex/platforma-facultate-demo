@@ -81,7 +81,7 @@ function Main({ programari }) {
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
-          Programari Actived
+          Programari Active
         </ListSubheader>
       }
       className={classes.root} 
