@@ -56,9 +56,12 @@ const ExpansionPanelDetails = withStyles((theme) => ({
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    // backgroundColor: "rgba(81, 220, 255, 0.404)",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
     width: "100%",
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
+    maxWidth: "60%",
   },
   nested: {
     paddingLeft: theme.spacing(4),

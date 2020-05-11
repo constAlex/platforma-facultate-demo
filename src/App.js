@@ -7,7 +7,7 @@ import { FormContainer, MainContainer } from "./redux/container";
 
 function App() {
   return (
-    <Container className="App" maxWidth="md">
+    <Container className="App" maxWidth="xlg">
       <NavBar />
       <Switch>
         <Route exact path="/" render={() => <MainContainer />} />

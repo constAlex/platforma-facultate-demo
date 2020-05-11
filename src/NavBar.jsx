@@ -9,7 +9,7 @@ function NavBar() {
     <div className="NavBar">
       <Container fluid>
         <Row align="center" nowrap gutterWidth={0} debug>
-          <Col style={{ marginRight: "5px", height: "100%" }} xs={2} debug>
+          <Col style={{ marginRight: "5px", height: "100%" }} xlg={2} debug>
             <AppBar className="NavBar-AppBar" position="static">
               <Link className="NavBar-Link" to="/" value="/">
                 Pagina Principala
