@@ -31,7 +31,7 @@ const ExpansionPanel = withStyles({
 
 const ExpansionPanelSummary = withStyles({
   root: {
-    backgroundColor: "rgba(255, 0, 25, .5)",
+    background: "linear-gradient(to left, #ee9ca7, #ffdde1)",
     borderBottom: "1px solid rgba(0, 0, 0, .125)",
     marginBottom: -1,
     minHeight: 60,
@@ -78,7 +78,7 @@ function Main({ programari }) {
     } else {
       setOpen(id);
     }
-  }
+  };
 
   return (
     <List
@@ -86,12 +86,20 @@ function Main({ programari }) {
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListItemText component="div" id="nested-list-subheader">
-          {programari.length === 0 ? "Programari inexistente" : "Programari Active"}
+          {programari.length === 0
+            ? "Programari inexistente"
+            : "Programari Active"}
         </ListItemText>
       }
-      className={classes.root} 
+      className={classes.root}
     >
       <div>
+        <br />
+        {programari.length === 0 && (
+          <Typography variant="h4">
+            Programeaza un examen pentru a incepe.
+          </Typography>
+        )}
         {programari.map((programare) => (
           <div
             style={{ border: "1px solid black", marginBottom: "5px" }}
