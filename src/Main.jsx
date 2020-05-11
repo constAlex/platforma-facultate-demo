@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import ListSubheader from "@material-ui/core/ListSubheader";
+// import ListSubheader from "@material-ui/core/ListSubheader";
+import ListItemText from "@material-ui/core/ListItemText";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ExpandLess from "@material-ui/icons/ExpandLess";
@@ -30,18 +31,19 @@ const ExpansionPanel = withStyles({
 
 const ExpansionPanelSummary = withStyles({
   root: {
-    backgroundColor: "rgba(0, 0, 0, .03)",
+    backgroundColor: "rgba(255, 0, 25, .5)",
     borderBottom: "1px solid rgba(0, 0, 0, .125)",
     marginBottom: -1,
-    minHeight: 56,
+    minHeight: 60,
     "&$expanded": {
-      minHeight: 56,
+      minHeight: 45,
     },
   },
   content: {
     "&$expanded": {
       margin: "12px 0",
     },
+    justifyContent: "center",
   },
   expanded: {},
 })(MuiExpansionPanelSummary);
@@ -80,9 +82,9 @@ function Main({ programari }) {
       component="nav"
       aria-labelledby="nested-list-subheader"
       subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Programari Active
-        </ListSubheader>
+        <ListItemText component="div" id="nested-list-subheader">
+          {programari.length === 0 ? "Programari inexistente" : "Programari Active"}
+        </ListItemText>
       }
       className={classes.root} 
     >
