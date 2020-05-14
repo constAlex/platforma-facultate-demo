@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MainForm.css";
 import TextField from "@material-ui/core/TextField";
 import NativeSelect from "@material-ui/core/NativeSelect";
 import Button from "@material-ui/core/Button";
 import useInputState from "./hooks/inputHook";
 import { v4 as uuidv4 } from "uuid";
+import { useParams } from "react-router-dom";
 
 const MainForm = ({
   programari,
   adaugaProgramare,
-  stergeProgramare,
+  updateProgramare,
 }) => {
   const [examDetails, changeExamDetails, addId] = useInputState();
+  const {id} = useParams();
+
+  useEffect(() => {
+   if(id){
+     let programareForUpdate = programari.find(programare => programare.id === id);
+     Object.keys(programareForUpdate).map(key => changeExamDetails(key,programareForUpdate[key]));
+   }
+  }, []);
+
+  const handleUpdate = (ev) => {
+    ev.preventDefault();
+    updateProgramare(examDetails,id);
+  }
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
@@ -28,12 +42,13 @@ const MainForm = ({
 
   return (
     <div className="MainForm">
-      <h1>Programare Examen</h1>
-      <form onSubmit={handleSubmit}>
+      {id ?  <h1>Update Examen</h1> :  <h1>Programare Examen</h1>}
+      <form onSubmit={id ? handleUpdate : handleSubmit}>
         <label htmlFor="specializare">Specializare</label>
         <NativeSelect
           className="MainForm-Field"
           id="specializare"
+          value={examDetails.specializare}
           onChange={handleChange}
           name="specializare"
         >
@@ -69,6 +84,7 @@ const MainForm = ({
           className="MainForm-Field"
           id="sesiune"
           onChange={handleChange}
+          value={examDetails.sesiune}
           name="sesiune"
         >
           <option>Vara</option>
@@ -112,7 +128,7 @@ const MainForm = ({
           color="primary"
           disableElevation
         >
-          Planifica Examenul
+         {!id ? `Planifica Examenul` : `Modifica programarea`} 
         </Button>
       </form>
     </div>
