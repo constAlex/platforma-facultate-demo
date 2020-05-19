@@ -5,8 +5,9 @@
 .MainForm form {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border-left: 1px solid black;
     padding: 20px;
+    background: linear-gradient(to left, #2980b9, #6dd5fa, #ffffff);
 }
 
 .MainForm-Field {

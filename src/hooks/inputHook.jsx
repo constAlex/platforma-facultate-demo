@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function useInputState() {
   const initialState = {
-    id: "0",
-    specializare: "",
+    id: uuidv4(),
+    specializare: "Informatica-Economica",
     materie: "Web Design",
     profesor: "",
     sesiune: "",
@@ -20,7 +21,7 @@ function useInputState() {
   }
 
   function addId(id) {
-    setState((prev) => ({ ...prev, id }));
+    setState((prev) => ({ ...prev, id: id }));
   }
 
   return [state, changeInput, addId];
