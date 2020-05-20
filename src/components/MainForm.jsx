@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import "./MainForm.css";
+import "../MainForm.css";
 import TextField from "@material-ui/core/TextField";
 import NativeSelect from "@material-ui/core/NativeSelect";
 import Button from "@material-ui/core/Button";
-import useInputState from "./hooks/inputHook";
+import useInputState from "../hooks/inputHook";
 import { v4 as uuidv4 } from "uuid";
 import { useParams } from "react-router-dom";
 

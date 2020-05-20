@@ -1,9 +1,12 @@
 import React from "react";
 import "./App.sass";
 import Container from "@material-ui/core/Container";
-import NavBar from "./NavBar";
+import NavBar from "./components/NavBar";
 import { Switch, Route } from "react-router-dom";
-import { FormContainer, MainContainer, DeleteContainer, UpdateListContainer } from "./redux/container";
+import { MainContainer } from "./redux/containers/MainContainer";
+import { FormContainer } from "./redux/containers/FormContainer";
+import { UpdateListContainer } from "./redux/containers/UpdateListContainer";
+import { DeleteContainer } from "./redux/containers/DeleteContainer";
 
 function App() {
   return (

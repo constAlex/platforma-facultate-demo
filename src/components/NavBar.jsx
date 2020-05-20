@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavBar.css";
+import "../NavBar.css";
 import AppBar from "@material-ui/core/AppBar";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
