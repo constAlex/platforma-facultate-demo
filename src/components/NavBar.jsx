@@ -9,14 +9,14 @@ function NavBar() {
     <div className="NavBar">
       <Container fluid>
         <Row align="center" nowrap gutterWidth={0} debug>
-          <Col style={{ marginRight: "5px", height: "100%" }} xlg={2} debug>
+          <Col style={{ marginRight: "5px", height: "100%" }} xlg={4} debug>
             <AppBar className="NavBar-AppBar" position="static">
               <Link className="NavBar-Link" to="/" value="/">
                 Pagina Principala
               </Link>
             </AppBar>
           </Col>
-          <Col xs={10} debug>
+          <Col xs={8} debug>
             <AppBar className="NavBar-AppBar" position="static">
               <Link
                 className="NavBar-Link"
@@ -35,9 +35,9 @@ function NavBar() {
               <Link className="NavBar-Link" to="/stergere">
                 Stergere
               </Link>
-              <Link className="NavBar-Link" to="/interogare">
+              {/* <Link className="NavBar-Link" to="/interogare">
                 Interogare
-              </Link>
+              </Link> */}
             </AppBar>
           </Col>
         </Row>
