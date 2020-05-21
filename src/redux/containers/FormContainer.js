@@ -1,4 +1,5 @@
 import { connect} from "react-redux";
+import { bindActionCreators } from 'redux';
 import MainForm from "../../components/MainForm";
 import {
   adaugaProgramare,
@@ -10,13 +11,9 @@ const mapStateToProps = (state) => {
     programari: state.programari,
   };
 };
-const mapDispatchToProps = (dispatch) => {
-  return {
-    adaugaProgramare: (programare) => dispatch(adaugaProgramare(programare)),
-    updateProgramare: (programare, id) =>
-      dispatch(updateProgramare(programare, id)),
-};
-}
+const mapDispatchToProps = dispatch => 
+ bindActionCreators({adaugaProgramare,updateProgramare},dispatch);
+
 export const FormContainer = connect(
   mapStateToProps,
   mapDispatchToProps

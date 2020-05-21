@@ -115,12 +115,11 @@ export default function CheckboxList({ programari, stergeProgramare }) {
       })}
       {programari.length ? (
         <ListItem
-          onClick={handleDeleteAll}
           className={classes.ListItem}
           style={{ display: "flex", justifyContent: "center" }}
         >
           {<h3>Sterge elementele selectate</h3>}
-          <IconButton edge="end" aria-label="comments">
+          <IconButton onClick={handleDeleteAll} edge="end" aria-label="comments">
             <DeleteIcon />
           </IconButton>
         </ListItem>
