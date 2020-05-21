@@ -1,6 +1,4 @@
-export const ADAUGA_PROGRAMARE = "ADAUGA_PROGRAMARE";
-export const STERGE_PROGRAMARE = "STERGE_PROGRAMRE";
-export const UPDATE_PROGRAMARE = "UPDATE_PROGRAMARE";
+import {UPDATE_PROGRAMARE, ADAUGA_PROGRAMARE, STERGE_PROGRAMARE} from './actionNames';
 
 // action creators
 export function adaugaProgramare(programare) {
