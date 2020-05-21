@@ -7,7 +7,7 @@ function useInputState() {
     specializare: "Informatica-Economica",
     materie: "Web Design",
     profesor: "",
-    sesiune: "",
+    sesiune: "vara",
     an_univ: 2019,
     an_stud: 1,
     data_exam: "2019-05-24",

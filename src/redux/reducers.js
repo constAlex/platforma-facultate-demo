@@ -31,9 +31,4 @@ const programariReducer = (state, action) => {
   };
 };
 
-// const programariReducer = combineReducers({
-//   programari: actualizareProgramari,
-//   programare: actualizareProgramare,
-// });
-
 export default programariReducer;
