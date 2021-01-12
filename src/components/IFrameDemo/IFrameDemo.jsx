@@ -12,6 +12,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import { iframeResizer } from "iframe-resizer";
 import "./IFrameDemo.scss";
 
 function Copyright() {
@@ -27,7 +28,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme: any) => ({
+const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
     display: "flex",
@@ -47,7 +48,8 @@ const useStyles = makeStyles((theme: any) => ({
   },
 }));
 
-const IFrameDemo: React.FC = () => {
+const IFrameDemo = () => {
+  iframeResizer({ log: true, checkOrigin: false }, "myIframe");
   const classes = useStyles();
 
   return (
