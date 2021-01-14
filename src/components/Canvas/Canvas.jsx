@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import './Canvas.scss';
+import "./Canvas.scss";
 
 function resizeCanvasToDisplaySize(canvas) {
   const { width, height } = canvas.getBoundingClientRect();
@@ -19,15 +19,13 @@ const Canvas = () => {
   const canvasRef = useRef(null);
   const segmentWidth = 100;
 
-  const avgSpeeds = [
-    24, 50, 16, 48, 30, 58, 30, 85, 59 
-  ];
+  const avgSpeeds = [14, 70, 26, 38, 40, 88, 10, 85, 19];
   const topSpeed = Math.max(...avgSpeeds);
-  console.log('topSpeed: ', topSpeed);
+  console.log("topSpeed: ", topSpeed);
   const scale = topSpeed + 50;
-  console.log('scale: ', scale);
-  const midlleScaleSpeed = scale/2;
-  console.log('middle scale speed: ', midlleScaleSpeed);
+  console.log("scale: ", scale);
+  const midlleScaleSpeed = scale / 2;
+  console.log("middle scale speed: ", midlleScaleSpeed);
 
   const initialValue = 100;
 
@@ -46,9 +44,14 @@ const Canvas = () => {
     // ctx.lineTo(drawWidth += segmentWidth, 340);
     // ctx.lineTo(drawWidth += segmentWidth, 200);
 
-    ctx.lineTo(drawWidth += 100, initialValue + (avgSpeeds[0] * 2));
+    ctx.lineTo((drawWidth += 100), initialValue + avgSpeeds[0] * 2);
     // ctx.lineTo(drawWidth += segmentWidth + 100, initialValue + (avgSpeeds[1] * 2));
-    ctx.fillRect(drawWidth - 7.5, initialValue + (avgSpeeds[0] * 2) - 7.5, 15, 15);
+    // ctx.fillRect(
+    //   drawWidth - 7.5,
+    //   initialValue + avgSpeeds[0] * 2 - 7.5,
+    //   15,
+    //   15
+    // );
     // ctx.lineTo(drawWidth += segmentWidth + 100, initialValue + (avgSpeeds[2] * 2));
     // ctx.lineTo(drawWidth += segmentWidth + 100, initialValue + (avgSpeeds[3] * 2));
     // ctx.lineTo(drawWidth += segmentWidth + 100, initialValue + (avgSpeeds[4] * 2));
@@ -57,9 +60,21 @@ const Canvas = () => {
     // ctx.lineTo(drawWidth += segmentWidth + 100, initialValue + (avgSpeeds[7] * 2));
     // ctx.lineTo(drawWidth += segmentWidth + 100, initialValue + (avgSpeeds[8] * 2));
 
-    avgSpeeds.forEach(speedValue => {
-      ctx.lineTo(drawWidth += segmentWidth + 100, initialValue + (speedValue * 2));
-      ctx.fillRect(drawWidth - 7.5, initialValue + (speedValue * 2) - 7.5, 15, 15);
+    const segmentClicked = 4;
+
+    avgSpeeds.forEach((speedValue, index) => {
+      ctx.lineTo(
+        (drawWidth += segmentWidth + 100),
+        initialValue + speedValue * 2
+      );
+      if (index + 1 === segmentClicked) {
+        ctx.fillRect(
+          drawWidth - 7.5,
+          initialValue + speedValue * 2 - 7.5,
+          15,
+          15
+        );
+      }
     });
 
     ctx.lineWidth = 1;
@@ -88,7 +103,7 @@ const Canvas = () => {
     };
   }, [draw]);
 
-  return <canvas width="2500" height="650" ref={canvasRef} />;
+  return <canvas id="canvas" width="2500" height="650" ref={canvasRef} />;
 };
 
 export default Canvas;
