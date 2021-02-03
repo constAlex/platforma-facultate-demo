@@ -1,0 +1,42 @@
+.settings-component {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+
+  &__button {
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 140px;
+    height: 40px;
+    border: 0px;
+    font-weight: 400;
+    font-family: helvetica;
+    font-size: 12px;
+    text-align: left;
+    background-color: rgb(252, 242, 223);
+
+    &--blue {
+      color: blue;
+      font-weight: 200;
+    }
+
+    &--green {
+      color: green;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    vertical-align: middle;
+    height: 1.8em;
+    margin-right: 10px;
+  }
+}
