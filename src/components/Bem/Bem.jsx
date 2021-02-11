@@ -10,7 +10,8 @@ const Bem = () => {
   return (
     <div className={componentName}>
       <h1 className={`${componentName}__title`}>BEM</h1>
-      <h1 className={`${componentName}__subtitle`}>block element modifier</h1>
+      <h2 className={`${componentName}__subtitle`}>block element modifier</h2>
+      <h3 className={`${componentName}__caption`}>(.block __elem --mod)</h3>
       <Settings />
       <Home />
       <Profile />
