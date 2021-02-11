@@ -1,6 +1,22 @@
 body {
-  padding: 30px 0;
+  padding: 25px 0;
+  background-color: whitesmoke;
 }
-hr {
-  margin: 100px 0 100px 0;
+
+.bem-component {
+  &__title {
+    font-size: 2.5rem;
+    line-height: 0;
+    color: rgb(87, 131, 211);
+    text-align: center;
+  }
+  &__subtitle {
+    text-transform: capitalize;
+    font-size: 2.3rem;
+    font-weight: bolder;
+    text-decoration: overline;
+    font-style: italic;
+    color: cornflowerblue;
+    text-align: center;
+  }
 }

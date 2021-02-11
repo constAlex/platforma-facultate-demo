@@ -9,10 +9,10 @@ const Bem = () => {
 
   return (
     <div className={componentName}>
+      <h1 className={`${componentName}__title`}>BEM</h1>
+      <h1 className={`${componentName}__subtitle`}>block element modifier</h1>
       <Settings />
-      {/* <hr /> */}
       <Home />
-      {/* <hr /> */}
       <Profile />
     </div>
   );
