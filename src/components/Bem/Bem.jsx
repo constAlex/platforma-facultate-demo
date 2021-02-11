@@ -1,6 +1,7 @@
 import React from "react";
 import Settings from "../Settings/Settings";
 import Home from "../Home/Home";
+import Profile from "../Profile/Profile";
 import "./Bem.scss";
 
 const Bem = () => {
@@ -9,8 +10,10 @@ const Bem = () => {
   return (
     <div className={componentName}>
       <Settings />
-      <hr />
-      <Home context="home" />
+      {/* <hr /> */}
+      <Home />
+      {/* <hr /> */}
+      <Profile />
     </div>
   );
 };

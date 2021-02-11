@@ -4,20 +4,23 @@ import Button from "../Button/Button.jsx";
 import img1 from "../../img/facebook.png";
 import img2 from "../../img/paypal.png";
 import img3 from "../../img/spotify.png";
-import "./Settings.scss";
+import "./Profile.scss";
 
-const Settings = () => {
-  const componentName = "settings-component";
-  const buttonSettingsContextblue = classnames(
+const Profile = () => {
+  const componentName = "profile-component";
+  const buttonProfileContextblue = classnames(
     ` ${componentName}__button-settings ${componentName}__button-settings--blue`
   );
-  const buttonSettingsContextRed = classnames(
+  const buttonProfileContextRed = classnames(
     ` ${componentName}__button-settings ${componentName}__button-settings--red`
+  );
+  const buttonProfileContextLargeBlue = classnames(
+    ` ${componentName}__button-settings-large ${componentName}__button-settings-large--blue`
   );
 
   return (
     <div className={componentName}>
-      <h1>Settings</h1>
+      <h1>Profile</h1>
       <div className="flex-container">
         <Button
           text="Select Facebook"
@@ -27,17 +30,22 @@ const Settings = () => {
         />
         <Button
           text="Select PayPal"
-          modifier={buttonSettingsContextblue}
+          modifier={buttonProfileContextblue}
           img={img2}
         />
         <Button
           text="Select Spotify"
-          modifier={buttonSettingsContextRed}
+          modifier={buttonProfileContextRed}
           img={img3}
         />
       </div>
+      <Button
+        text="Select Newest PayPal"
+        modifier={buttonProfileContextLargeBlue}
+        img={img2}
+      />
     </div>
   );
 };
 
-export default Settings;
+export default Profile;

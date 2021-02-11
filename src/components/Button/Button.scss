@@ -1,0 +1,46 @@
+.btn-component {
+  &__button {
+    margin: 10px auto 0 auto;
+    width: 140px;
+    height: 40px;
+    border: 3px solid grey;
+    font-weight: 400;
+    font-family: helvetica;
+    font-size: 12px;
+    text-align: left;
+    background-color: blanchedalmond;
+
+    &--right {
+      text-align: right;
+    }
+
+    &--blue {
+      color: blue;
+      font-weight: 100;
+    }
+
+    &--green {
+      color: green;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    vertical-align: middle;
+    height: 1.8em;
+    margin-right: 10px;
+
+    &--right {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+}
