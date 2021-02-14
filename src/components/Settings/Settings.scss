@@ -1,37 +1,5 @@
 .settings-component {
-  width: 100%;
   text-align: center;
   background-color: darkorange;
   padding: 20px 0;
-
-  .flex-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__button-settings {
-    width: 290px;
-    height: 60px;
-    border: 4px solid purple;
-    font-weight: bold;
-    font-family: Arial;
-    font-size: 14px;
-    text-align: center;
-    background-color: whitesmoke;
-
-    &--blue {
-      color: blue;
-      margin-left: 50px;
-    }
-
-    &--red {
-      color: red;
-      margin-left: 50px;
-    }
-
-    &:hover {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-  }
 }

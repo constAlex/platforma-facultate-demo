@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.sass";
+import "./App.scss";
 import Container from "@material-ui/core/Container";
 import NavBar from "./components/NavBar";
 import { Switch, Route } from "react-router-dom";

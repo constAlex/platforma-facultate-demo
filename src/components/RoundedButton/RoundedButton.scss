@@ -1,10 +1,11 @@
-.btn-component {
+.rounded-btn-component {
   display: inline-block;
   width: 290px;
   height: 45px;
   border: 0;
   font-family: helvetica;
   background-color: blanchedalmond;
+  border-radius: 50%;
   margin: 20px 0 20px 20px;
 
   &--font-bold {
@@ -33,6 +34,10 @@
 
   &--red {
     color: red;
+  }
+
+  &--profile-context {
+    border: 1px solid black;
   }
 
   &:hover {

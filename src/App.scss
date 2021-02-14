@@ -1,0 +1,10 @@
+$primary-color: rgba(81, 220, 255, 0.404);
+
+body {
+    background-color: whitesmoke;
+}
+
+.App {
+    background-color: $primary-color;
+    min-height: 100vh;
+}

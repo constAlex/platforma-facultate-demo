@@ -1,9 +1,7 @@
-body {
+.bem-component {
   padding: 25px 0;
   background-color: whitesmoke;
-}
-
-.bem-component {
+  
   &__title {
     font-size: 2.5rem;
     line-height: 0;

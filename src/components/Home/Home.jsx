@@ -11,14 +11,23 @@ const Home = () => {
   return (
     <div className={componentName}>
       <h1>Home</h1>
-      <Button text="Select Facebook" img={img1} />
+      <Button
+        text="Select Facebook"
+        modifiers="btn-component--border"
+        img={img1}
+        context="right"
+      />
       <Button
         text="Select PayPal"
-        modifier="blue"
+        modifiers="btn-component--border-thick btn-component--font-bold btn-component--red"
         img={img2}
-        imgPosition="right"
+        context="right"
       />
-      <Button text="Select Spotify" modifier="green" img={img3} />
+      <Button
+        text="Select Spotify"
+        modifiers="btn-component--border btn-component--green"
+        img={img3}
+      />
     </div>
   );
 };

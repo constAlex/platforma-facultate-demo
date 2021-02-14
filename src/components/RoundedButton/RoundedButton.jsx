@@ -1,15 +1,14 @@
 import React from "react";
 import classnames from "classnames";
-import "./Button.scss";
+import "./RoundedButton.scss";
 
-const Button = (props) => {
-  const { modifiers, text, img, context, style } = props;
-  const componentName = "btn-component";
+const RoundedButton = (props) => {
+  const { modifiers, text, img, context } = props;
+  const componentName = "rounded-btn-component";
   const buttonClasses = classnames(
     componentName,
     modifiers,
-    context && `${componentName}--${context}`,
-    style
+    context && `${componentName}--${context}`
   );
   const iconClasses = classnames(
     `${componentName}__icon`,
@@ -30,4 +29,4 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+export default RoundedButton;
